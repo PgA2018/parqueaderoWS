@@ -1,19 +1,28 @@
 var Express = require('express');
 var CompraController=require("../controllers/compraController");
-var UnidadNegocioController= require("../controllers/unidadNegocioController");
+var UsuarioController=require("../controllers/UsuarioController");
+var TipoUsuarioController=require("../controllers/TipoUsuarioController");
 
 
 var router = Express.Router();
 
-/*
- * RUTAS DE COMPRAS
- */
-/*router.get("/compra",CompraController.findAll);
-router.get("/compra/:id",CompraController.findById);
-router.post("/compra",CompraController.addCompra);
-router.delete("/compra/:id",CompraController.deleteCompra);
-router.get("/error",CompraController.generarError);*/
 
-router.get("/unidadnegocio", UnidadNegocioController.findAll);
+//crud de usuario*******************************************************
+router.get("/usuario", UsuarioController.findAll);
+router.get("/usuario/:id", UsuarioController.findById);
+router.post("/usuario", UsuarioController.addUsuario);
+router.delete("/usuario/:id", UsuarioController.deleteUsuario);
+router.put('/usuario/:id', UsuarioController.update);
 module.exports = router; 
+//*********************************************************************
+
+
+//crud de usuario*******************************************************
+router.get("/tipousuario", TipoUsuarioController.findAll);
+router.get("/tipousuario/:id", TipoUsuarioController.findById);
+router.post("/tipousuario", TipoUsuarioController.addTipoUsuario);
+router.delete("/tipousuario/:id", TipoUsuarioController.deleteTipoUsuario);
+router.put("/tipousuario/:id", TipoUsuarioController.update);
+module.exports = router; 
+//*********************************************************************
  

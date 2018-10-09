@@ -1,4 +1,3 @@
-'use strict';
 module.exports = function(sequelize, DataTypes) {
     var Compra = sequelize.define('Compra', {
         id_compra:{

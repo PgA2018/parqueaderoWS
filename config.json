@@ -1,26 +1,26 @@
 {
-  "development": {
-    "username": "postgres",
-    "password": "ud3n4r",
-    "database": "ci",
-    "host": "127.0.0.1",
-    "port":"5432",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "postgres",
-    "password": "ud3n4r",
-    "database": "ci",
-    "host": "127.0.0.1",
-    "port":"5432",
-    "dialect": "postgres"
-  },
-  "production": {
-    "username": "postgres",
-    "password": "ud3n4r",
-    "database": "ci",
-    "host": "127.0.0.1",
-    "port":"5432",
-    "dialect": "postgres"
-  }
+    "development": {
+        "username": "postgres",
+        "password": "luis12345",
+        "database": "parqueadero",
+        "host": "192.168.1.54",
+        "port": "5432",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "postgres",
+        "password": "luis12345",
+        "database": "parqueadero",
+        "host": "192.168.1.54",
+        "port": "5432",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "postgres",
+        "password": "luis12345",
+        "database": "parqueadero",
+        "host": "192.168.1.54",
+        "port": "5432",
+        "dialect": "postgres"
+    }
 }

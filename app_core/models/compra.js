@@ -1,29 +1,29 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
     var Compra = sequelize.define('Compra', {
-        id_compra:{
+        id_compra: {
             type: DataTypes.DOUBLE,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
-        observacion:{
+        observacion: {
             type: DataTypes.STRING(100),
-            allowNull:true,
+            allowNull: true,
             set: function(val) {
-                if(val){
+                if (val) {
                     this.setDataValue('observacion', val.toUpperCase());
                 }
             }
         },
-        fecha_compra:{
-            type:DataTypes.DATE,
-            allowNull:false,
+        fecha_compra: {
+            type: DataTypes.DATE,
+            allowNull: false,
             defaultValue: sequelize.NOW
         },
-        id_usuario:{
+        id_usuario: {
             type: DataTypes.DOUBLE,
-            allowNull:false
+            allowNull: false
         }
     }, {
         timestamps: false,
@@ -31,8 +31,7 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true,
         tableName: 'compra',
         classMethods: {
-            associate: function(models) {
-            }
+            associate: function(models) {}
         }
     });
     return Compra;

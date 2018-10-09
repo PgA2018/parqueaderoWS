@@ -1,3 +1,4 @@
+
 module.exports=function(sequelize,
 DataTypes)
 {
@@ -7,7 +8,9 @@ return sequelize.define('Usuario',
 id:
 {
 type:DataTypes.INTEGER,
+
 autoIncrement: true,
+
 allowNull:false,
 primaryKey:true
 }

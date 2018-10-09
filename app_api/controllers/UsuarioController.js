@@ -18,8 +18,9 @@ var findById= function (req, res){
     });
 };
 
-var addUsuario=function (req,res){
-  var usuario={
+var addUsuario = function (req,res){
+  console.log(req);
+  var usuario = {
       nombre:req.body.nombre,
       identificacion:req.body.identificacion,
       direccion:req.body.direccion,

@@ -7,7 +7,9 @@ return sequelize.define('Sucursal',
 id:
 {
 type:DataTypes.INTEGER,
+
 autoIncrement: true,
+
 allowNull:false,
 primaryKey:true
 }

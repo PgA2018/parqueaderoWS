@@ -16,6 +16,20 @@ var findAll = function(req, res) {
     );
 }
 
+var mostrar = function(req, res) {
+
+    PlazasDao.mostrar().then(
+        function(variable) {
+            Respuesta.sendJsonResponse(res, 200, variable);
+        }
+    ).catch(
+        function(error) {
+            Respuesta.sendJsonResponse(res, 500, error);
+        }
+    );
+
+}
+
 var findById = function(req, res) {
     PlazasDao.findById(req.params.id)
         .then(function(plaza) {
@@ -81,3 +95,4 @@ module.exports.findById = findById;
 module.exports.createPlaza = createPlaza;
 module.exports.updatePlaza = updatePlaza;
 module.exports.deletePlaza = deletePlaza;
+module.exports.mostrar = mostrar;

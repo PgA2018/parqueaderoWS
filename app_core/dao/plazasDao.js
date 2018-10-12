@@ -5,6 +5,22 @@ var findAll = function() {
     return Models.Plazas.findAll({});
 }
 
+var mostrar = function() {
+    return Models.Plazas.findAll({
+        include: [{
+            model: Models.TipoVehiculo,
+            attributes: ['nombre']
+        }],
+        attributes: [
+            'id'
+        ],
+        where: {
+            'disponible': true
+        }
+    });
+}
+
+
 var findById = function(id) {
     return Models.Plazas.findOne({
         where: {
@@ -72,3 +88,4 @@ module.exports.findById = findById;
 module.exports.createPlaza = createPlaza;
 module.exports.updatePlaza = updatePlaza;
 module.exports.deletePlaza = deletePlaza;
+module.exports.mostrar = mostrar;

@@ -35,6 +35,7 @@ module.exports = router;
 
 router.get("/plazas", PlazasController.findAll);
 router.get("/plazas/:id", PlazasController.findById);
+router.get("/plazasDisponibles", PlazasController.mostrar);
 router.post("/plazas", PlazasController.createPlaza);
 router.put("/plazas/:id", PlazasController.updatePlaza);
 router.delete("/plazas/:id", PlazasController.deletePlaza);

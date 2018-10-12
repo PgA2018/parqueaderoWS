@@ -3,7 +3,7 @@
         "username": "postgres",
         "password": "luis12345",
         "database": "parqueadero",
-        "host": "192.168.1.54",
+        "host": "localhost",
         "port": "5432",
         "dialect": "postgres"
     },
@@ -11,7 +11,7 @@
         "username": "postgres",
         "password": "luis12345",
         "database": "parqueadero",
-        "host": "192.168.1.54",
+        "host": "localhost",
         "port": "5432",
         "dialect": "postgres"
     },
@@ -19,9 +19,8 @@
         "username": "postgres",
         "password": "luis12345",
         "database": "parqueadero",
-        "host": "192.168.1.54",
+        "host": "localhost",
         "port": "5432",
         "dialect": "postgres"
     }
 }
-
